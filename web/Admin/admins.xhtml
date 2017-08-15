@@ -1,0 +1,426 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+              <title>EMS Ghana</title>
+      
+         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+         <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+         <link href="resources/css/component.css" rel="stylesheet" type="text/css" />
+       <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+         <script src="resources/js/jquery.js"></script>
+        <script src="resources/js/bootstrap.js"></script>
+
+        <script>
+            $(document).ready(function() {
+    $("div.bhoechie-tab-menu>div.list-group>a").click(function(e) {
+        e.preventDefault();
+        $(this).siblings('a.active').removeClass("active");
+        $(this).addClass("active");
+        var index = $(this).index();
+        $("div.bhoechie-tab>div.bhoechie-tab-content").removeClass("active");
+        $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
+    });
+});
+         </script>
+         
+        <style>
+            /*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  margin-left: 50px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  -moz-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .glyphicon,
+div.bhoechie-tab-menu div.list-group>a .fa {
+  color: #5A55A3;
+}
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #5A55A3;
+  background-image: #5A55A3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #5A55A3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+        </style>
+    </h:head>
+    <h:body>
+        
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">ESM MAXIN</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">HOME</a></li>
+         <li><a href="#">ABOUT US</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">ADD NEW<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </li>
+      <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">REPORT<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="#">CHANGE PASSWORD</a></li>
+        <li><a href="#">CONTACT US</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> AMIN</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> LOGOUT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+        <div class="big-wrapper">
+   <div class="row">
+       <div class="col-md-9">
+	<div class="row">
+        <div class="col-lg-11 col-md-5 col-sm-8 col-xs-9 bhoechie-tab-container">
+            <div class="col-lg-2 col-md-3 col-sm-3 col-xs-3 bhoechie-tab-menu">
+              <div class="list-group">
+                   <a href="#" class="list-group-item active text-center">
+                  <h4 class="glyphicon glyphicon-home"></h4><br/>Admin Dashboard
+                </a>
+                <a href="#" class="list-group-item  text-center">
+                  <h4 class="glyphicon glyphicon-user"></h4><br/>Add Employee
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br/>Add Salary
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-link"></h4><br/>Add Leave
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-cutlery"></h4><br/>Employee Report
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br/>Salary Report
+                </a>
+                  <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br/>Leave Report
+                </a>
+                  <a href="#" class="list-group-item text-center">
+                  <h4 class="glyphicon glyphicon-credit-card"></h4><br/>Change Password
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 bhoechie-tab" >
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+                    <center>
+                      <h1 class="glyphicon glyphicon-dachbosrd" style="font-size:14em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      <h3 style="margin-top: 0;color:#55518a">Flight Reservation</h3>
+                    </center>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+                    <center>
+                        <h:form>
+                           
+                    <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">First Name<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.firstName}"></h:inputText>
+                         </div>
+                        <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Middle Name<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.middelName}"></h:inputText>
+                         </div>
+                             <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Last Name<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.lastName}"></h:inputText>
+                         </div>
+                            <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Gender<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.gender}"></h:inputText>
+                         </div>
+                            <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Email<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.email}"></h:inputText>
+                         </div>
+                             <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Date of Birth<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.dob}"></h:inputText>
+                         </div>
+                             <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Mobile<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.mobile}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Address<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.address}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">City<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.city}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Status<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.status}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Employee Code</label>
+                <h:inputText class="form-control" value="#{bean.employee.employeecode}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Position<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.position}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Department<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.department}"></h:inputText>
+                         </div>
+                              <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Manager<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.manager}"></h:inputText>
+                         </div>
+                                   <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Supervisor<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.supervisor}"></h:inputText>
+                         </div>
+                            <br />
+            <br />
+                             <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Username<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.uername}"></h:inputText>
+                         </div>
+             <div class="col-sm-4"> <!-- Name field -->
+		<label  for="name">Password<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.employee.password}"></h:inputText>
+                         </div>
+                            <br />
+                            <br />
+                            <br />
+            <br />
+            <div class="col-sm-12">
+                            <br />
+
+            <h:commandButton action="#{bean.Add()}" class="btn btn-primary" value="ADD"></h:commandButton>
+            </div>
+                            </h:form>
+                    </center>
+
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content" >
+                    <center>
+                      <h:form>
+                           
+                    <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Employee Code<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.salary.employecode}"></h:inputText>
+                         </div>
+                        <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Month<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.salary.months}"></h:inputText>
+                         </div>
+                             <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Year<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.salary.years}"></h:inputText>
+                         </div>
+                            <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Amount<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.salary.amount}"></h:inputText>
+                         </div>
+                          
+            <br />
+            <div class="col-sm-12">   
+                            <br />
+
+            <h:commandButton action="#{bean.addsalary()}" class="btn btn-primary" value="ADD"></h:commandButton>
+            </div>
+                            </h:form>
+                    </center>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <center>
+                       <h:form>
+                           
+                    <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Employee Code<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.leave.employecode}"></h:inputText>
+                         </div>
+                        <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Reason for leave<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.leave.reason}"></h:inputText>
+                         </div>
+                             <div class="col-sm-12"> <!-- Name field -->
+		<label class="pull-left" for="name">Description<span style="color:red">*</span></label>
+                <h:inputTextarea class="form-control" value="#{bean.leave.description}"/>
+                           
+                
+                         </div>
+                            <div class="col-sm-12"> <!-- Name field -->
+                                <label class="pull-left" for="name">From Date<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.leave.frmdate}"></h:inputText>
+                         </div>
+                          
+            <br />
+                      <div class="col-sm-12"> <!-- Name field -->
+                                <label class="pull-left" for="name">To Date<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.leave.todate}"></h:inputText>
+                         </div>
+                          
+            <br />
+                      <div class="col-sm-12"> <!-- Name field -->
+                                <label class="pull-left" for="name">Leave Status<span style="color:red">*</span></label>
+                <h:inputText class="form-control" value="#{bean.leave.leavestatus}"></h:inputText>
+                         </div>
+                          
+            <br />
+            <div class="col-sm-12">   
+                            <br />
+
+            <h:commandButton action="#{bean.addleave()}" class="btn btn-primary" value="ADD"></h:commandButton>
+            </div>
+                            </h:form>
+                    </center>
+                </div>
+                <div class="bhoechie-tab-content">
+                    <center>
+                        <h:dataTable var="emp" value="#{bean.listitem()}" class="table table-bordered">
+                             <h:column>    				
+                            <f:facet name = "header">Employee Code</f:facet>    				
+                              #{emp.employeecode}
+                            </h:column>
+                                <h:column>    				
+                            <f:facet name = "header">Lastname</f:facet>    				
+                              #{emp.lastName}
+                            </h:column>
+                              <h:column>    				
+                            <f:facet name = "header">Mobile</f:facet>    				
+                             #{emp.mobile}
+                            </h:column>
+                         <h:column>    				
+                            <f:facet name = "header">Depart.</f:facet>    				
+                             #{emp.department}
+                            </h:column>
+                 <h:column>    				
+                            <f:facet name = "header">Status</f:facet>    				
+                             #{emp.status}
+                            </h:column>
+                               <h:column>    				
+                            <f:facet name = "header">Email</f:facet>    				
+                             #{emp.email}
+                            </h:column>
+                             <h:column>    				
+                            <f:facet name = "header">Action</f:facet> 
+                            <h:form class="bhoechie-tab-menu">                           
+                                <h:commandLink  action = "page1" class="glyphicon glyphicon-trash group-list" />|
+                                <a href="#" class="list-group-item  text-center">
+                            <h:commandLink  action = "#"  class="glyphicon glyphicon-edit" />
+                                </a>
+                            </h:form> 
+                            </h:column>
+                        </h:dataTable>
+                    </center>
+                </div>
+                  <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-credit-card" style="font-size:12em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      <h3 style="margin-top: 0;color:#55518a">Credit Card</h3>
+                    </center>
+                </div>
+                  <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-credit-card" style="font-size:12em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      <h3 style="margin-top: 0;color:#55518a">Credit Card</h3>
+                    </center>
+                </div>
+                  <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-credit-card" style="font-size:12em;color:#55518a"></h1>
+                      <h2 style="margin-top: 0;color:#55518a">Cooming Soon</h2>
+                      <h3 style="margin-top: 0;color:#55518a">Credit Card</h3>
+                    </center>
+                </div>
+            </div>
+        
+  </div>
+</div>  
+           
+           
+       </div>
+  <div class="col-md-3">
+  
+      <img src="resources/images/hello.jpg" class="img-responsive" width="100%" height="400px"/>
+  </div>
+</div>
+        
+        </div>
+    </h:body>
+</html>
+
