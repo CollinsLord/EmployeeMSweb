@@ -3,14 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/web/user/changepassword.xhtml</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/src/java/Sessions/AbstractFacade.java</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/web/user/index_user.xhtml</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/web/user/projects.xhtml</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/web/user/leavreport.xhtml</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/web/user/salreport.xhtml</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/web/user/leave.xhtml</file>
-            <file>file:/home/collins/NetBeansProjects/EmployeeMSweb/src/java/Beans/JSFManagedBean.java</file>
+            <file>file:/home/collins/Git/EmployeeMSweb/web/Admin/index.html</file>
+            <file>file:/home/collins/Git/EmployeeMSweb/web/WEB-INF/web.xml</file>
+            <file>file:/home/collins/Git/EmployeeMSweb/src/java/Servlet/LogoutServlet.java</file>
+            <file>file:/home/collins/Git/EmployeeMSweb/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>
